@@ -1,0 +1,22 @@
+{
+  "name": "urlshortener/urlshortener",
+  "description": "",
+  "type": "project",
+  "version": "1.0.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Martin Valko",
+      "email": "martin.valko@student.ssnd.sk"
+    }
+  ],
+  "require": {
+    "php": ">=8.2",
+    "ext-pdo": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Shortener\\": "src/"
+    }
+  }
+}

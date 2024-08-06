@@ -1,0 +1,6 @@
+.idea
+/database
+*.iml
+.env
+backend/vendor
+composer.lock
