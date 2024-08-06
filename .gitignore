@@ -3,4 +3,4 @@
 *.iml
 .env
 backend/vendor
-composer.lock
+backend/composer.lock
