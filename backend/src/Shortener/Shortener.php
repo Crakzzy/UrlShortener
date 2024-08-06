@@ -19,12 +19,14 @@ class Shortener
         $shortenedUrl = trim($_SERVER['REQUEST_URI'], '/');
 
         try {
-            $baseUrl = $this->database->query("SELECT base_url FROM urls WHERE shortened_url LIKE ?", ['%'. $shortenedUrl])[0]["base_url"];
+            $baseUrl = $this->database->query("SELECT base_url FROM urls WHERE shortened_url LIKE ?", ['%'. $shortenedUrl]);
 
             if (empty($baseUrl)) {
                 echo "URL not found!";
                 die();
             }
+
+            $baseUrl = $baseUrl[0]['base_url'];
 
             header("Location: " . $baseUrl);
         } catch (PDOException $e) {
