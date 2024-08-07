@@ -15,16 +15,16 @@ Just out of boredom and to learn a bit more about PHP.
 ```
 docker network create --driver=bridge --subnet=172.27.0.0/16 url-shortener-network
 ```
-3. Create a `.env` file with the following content:
+4. Create a `.env` file with the following content:
 ```
 POSTGRES_HOST=172.27.0.2
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=postgres
 POSTGRES_DB=postgres
 ```
-4. Run `composer install`
 5. Run `docker compose up build`
-6. Run `docker compose up`
+6. Run `docker exec -it php bash`
+7. Run `composer install`
 
 ## Usage
 1. Open your browser and navigate to `localhost:8080`
